@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.mock-server.integration-test</groupId>
+    <groupId>org.mock-server.fk.integration-test</groupId>
     <artifactId>skip</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -17,7 +17,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.mock-server</groupId>
+            <groupId>org.mock-server.fk</groupId>
             <artifactId>mockserver-integration-testing</artifactId>
             <version>${mockserver.version}</version>
             <scope>test</scope>
@@ -28,7 +28,7 @@
         <plugins>
             <!-- run mockserver -->
             <plugin>
-                <groupId>org.mock-server</groupId>
+                <groupId>org.mock-server.fk</groupId>
                 <artifactId>mockserver-maven-plugin</artifactId>
                 <version>${mockserver.version}</version>
                 <configuration>

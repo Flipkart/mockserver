@@ -2,6 +2,7 @@ package org.mockserver.configuration;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Sets;
+import io.netty.util.internal.ConcurrentSet;
 import org.apache.commons.io.IOUtils;
 import org.mockserver.socket.SSLFactory;
 import org.slf4j.Logger;
@@ -27,8 +28,8 @@ public class ConfigurationProperties {
     static final Logger LOGGER = LoggerFactory.getLogger(ConfigurationProperties.class);
     static final Properties PROPERTIES = readPropertyFile();
 
-    static final Set<String> ALL_SUBJECT_ALTERNATIVE_DOMAINS = Sets.newConcurrentHashSet();
-    static final Set<String> ALL_SUBJECT_ALTERNATIVE_IPS = Sets.newConcurrentHashSet();
+    static final Set<String> ALL_SUBJECT_ALTERNATIVE_DOMAINS = new ConcurrentSet<String>();
+    static final Set<String> ALL_SUBJECT_ALTERNATIVE_IPS = new ConcurrentSet<String>();
     static final AtomicBoolean REBUILD_KEY_STORE = new AtomicBoolean(false);
 
     static final IntegerStringListParser INTEGER_STRING_LIST_PARSER = new IntegerStringListParser();

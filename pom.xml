@@ -8,7 +8,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.mock-server</groupId>
+    <groupId>org.mock-server.fk</groupId>
     <artifactId>mockserver</artifactId>
     <version>3.10.5-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -62,7 +62,6 @@
     <modules>
         <module>mockserver-logging</module>
         <module>mockserver-client-java</module>
-        <module>mockserver-client-ruby</module>
         <module>mockserver-core</module>
         <module>mockserver-integration-testing</module>
         <module>mockserver-netty</module>
@@ -314,7 +313,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>18.0</version>
+                <version>14.0.1</version>
             </dependency>
 
             <!-- logging -->
